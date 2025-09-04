@@ -1,40 +1,17 @@
-import { useState } from 'react';
-
-function Square() {
-  const [value, setValue] = useState(null);
-
-  function handleClick() {
-    setValue('X');
-  }
-
-  return (
-    <button
-      className="square"
-      onclick={handleClick}
-      >
-        {value}
-      </button>
-  );
-}
-
-export default function Board() {
+export default function TodoList() {
   return (
     <>
-    <div className="board-row">
-      <Square />
-      <Square />
-      <Square />
-    </div>
-    <div className="board-row">
-      <Square />
-      <Square />
-      <Square />
-    </div>
-    <div className="board-row">
-      <Square />
-      <Square />
-      <Square />
-    </div>
-    </>
-  );
+    <h1>Hedy Lamarr's Todos</h1>
+    <img
+      src="https://i.imgur.com/yXOvdOSs.jpg"
+      alt="Hedy Lamarr"
+      className="photo"
+      />
+        <ul>
+          <li>Invent new traffic lights</li>
+          <li>Rehearse a movie scene</li>
+          <li>Improve spectrum technology</li>
+        </ul>
+        </>
+        );
 }
