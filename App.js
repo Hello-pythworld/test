@@ -1,29 +1,16 @@
-function Item({ name, isPacked}){
-  return(
-    <li className="item">
-      {name} {isPacked&&'✅'}
-    </li>
-  );
+let guest = 0;
+
+function Cup() {
+  guest = guest +1;
+  return <h2>Tea Cup for guest #{guest}</h2>;
 }
 
-export default function PackagingList() {
-  return(
-    <section>
-      <h1>Sally Ride's PackagingList</h1>
-      <ul>
-        <Item
-        isPacked={true}
-        name="space suit"
-        />
-        <Item
-        isPacked={true}
-        name="Helmet with a golden leaf"
-        />
-        <Item
-        isPacked={false}
-        name="Photo of Tam"
-        />
-        </ul>
-    </section>
+export default function TeaSet() {
+  return (
+    <>
+    <Cup guest={1} />
+    <Cup guest={2} />
+    <Cup guest={3} />
+    </>
   );
 }
