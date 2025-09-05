@@ -1,35 +1,29 @@
-import { getImageUrl } from './utils.js'
-
-export default function Profile() {
-  return (
-    <Card>
-      <Avatar
-      size={100}
-      person={{
-        name:'Katsuko Saruhashi',
-        imageId: 'YfeOqp2'
-      }}
-      />
-    </Card>
+function Item({ name, isPacked}){
+  return(
+    <li className="item">
+      {name} {isPacked&&'✅'}
+    </li>
   );
 }
 
-function Avatar ({ person, size }) {
-  return (
-    <img
-      className="avatar"
-      src={getImageUrl(person)}
-      alt={person.name}
-      width={size}
-      height={size}
-    />
-  );
-}
-
-function Card({children}) {
-  return (
-    <div className="card">
-      {children}
-    </div>
+export default function PackagingList() {
+  return(
+    <section>
+      <h1>Sally Ride's PackagingList</h1>
+      <ul>
+        <Item
+        isPacked={true}
+        name="space suit"
+        />
+        <Item
+        isPacked={true}
+        name="Helmet with a golden leaf"
+        />
+        <Item
+        isPacked={false}
+        name="Photo of Tam"
+        />
+        </ul>
+    </section>
   );
 }
