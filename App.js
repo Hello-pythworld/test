@@ -1,7 +1,7 @@
-const person = {
-  name: 'Gregorio Y. Zara',
+const person ={
+  name:'Gregorio Y. Zara',
   theme: {
-    backgroundColor: 'black',
+    backgroundColor:'black',
     color: 'pink'
   }
 };
@@ -9,7 +9,7 @@ const person = {
 export default function TodoList() {
   return(
     <div style={person.theme}>
-      <h1>{person.name}'s Todos</h1>
+      <h1>{ }'s Todos</h1>
       <img
         className="avatar"
         src="https://i.imgur.com/7vQD0fps.jpg"
@@ -19,7 +19,7 @@ export default function TodoList() {
           <li>Improve the videophone</li>
           <li>Prepare aeronautics lectures</li>
           <li>Work on the alcohol-fueled engine</li>
-        </ul>
+          </ul>
     </div>
   );
 }
