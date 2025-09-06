@@ -1,16 +1,10 @@
-let guest = 0;
+import Gallery from './Gallery.js';
+import { Profile } from './Gallery.js';
 
-function Cup() {
-  guest = guest +1;
-  return <h2>Tea Cup for guest #{guest}</h2>;
-}
-
-export default function TeaSet() {
-  return (
-    <>
-    <Cup guest={1} />
-    <Cup guest={2} />
-    <Cup guest={3} />
-    </>
-  );
+export default function App() {
+    return (
+      <div>
+        <Profile/>
+      </div>
+    );
 }
