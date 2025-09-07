@@ -1,14 +1,8 @@
-function Item ({ name, isPacked }) {
+function Item({ name, isPacked}) {
   return (
     <li className="item">
-      {isPacked ? (
-        <del>
-          {name + '✅'}
-        </del>
-      ) : (
-        name
-      )}
-    </li>
+      {name} {isPacked && '✅'}
+      </li>
   );
 }
 
@@ -18,18 +12,18 @@ export default function PackingList() {
       <h1>Sally Ride's Packing List</h1>
       <ul>
         <Item
-        isPacked={true}
-        name="Space suit"
+          isPacked={true}
+          name="Space suit"
         />
         <Item
-        isPacked={true}
-        name="Helmet with a golden leaf"
-        />
-        <Item
-          isPakced={false}
-          name="Photo of Tam"
+          isPacked={true}
+          name="Helmet with a golden"
           />
-      </ul>
-    </section>
+          <Item
+            isPacked={false}
+            name="Photo of Tam"
+            />
+            </ul>
+          </section>
   );
 }
