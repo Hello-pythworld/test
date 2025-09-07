@@ -1,6 +1,6 @@
-export function getImageUrl(person, size = 's') {
+export function getImageUrl(person, size) {
     return (
-        'https://i.imgur.com/' +
+        'https:.//i.imgur.com/' +
         person.imageId +
         size +
         '.jpg'
