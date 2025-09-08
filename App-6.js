@@ -1,15 +1,19 @@
-function Item ({ name, isPacked}) {
+function Item ({ name, isPacked }) {
+    let itemContent = name;
+    if (isPacked) {
+        itemContent = name + " ✅";
+    }
     return (
         <li className="item">
-            {name} {isPacked && '✅'}
+            {itemContent}
         </li>
     );
 }
 
 export default function PackingList() {
-    return (
+    return(
         <section>
-            <h1>Sally Ride's Packing List</h1>
+            <h1> Sally Ride's Packing List</h1>
             <ul>
                 <Item
                     isPacked={true}
